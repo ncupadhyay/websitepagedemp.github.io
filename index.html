@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="hi">
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+  <meta charset="TDF-8">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">www.programingStack.com</h2>
+  <header>
+      <a href="#">Home</a>
+      <a href="#">JSP</a>
+      <a href="#">SERVLET</a>
+      <a href="#">HIBERNATE</a>
+      <a href="#">JDBC</a>
+
+  </header>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card" >
+      <h2>Introduction of JDBC</h2>
+      <br>
+      <!-- <div class="fakeimg" style="height:200px;">Image</div> -->
+      <p>
+        <ul type="circle">
+          <li>JDBC को Sun Microsystem ने Develop किया था.</li>
+          <li>JDBC का पूरा नाम java Databases connectivity हे, JDBC  java की एक टेक्नोलॉजी हे,यह java J2SE (java 2 Stander Edition) के अंतर्गत आता हे.</li>
+          <li>JDBC का उपयोग करके हम java एप्लीकेशन को रिलेस्नल Databases के साथ connect कर सकते हे,और डेटाबेस से डेटा को access और डेटा store कर सकते हे।</li>
+         <li>JDBC का उपयोग करके किसी भी relational डेटाबेस से डेटा को access किया जा सकता हे।</li>       
+      </ul>
+    </p>
+    </div>
+    <div class="card">
+      <h2>What is JDBC ?</h2><br>
+      <p>
+        <ul type="circle">
+          <li>JDBC is a collection of API (application programmable interface), और ये API और कुछ नहीं classes होती हे।</li>
+          <li>JDBC जावा की एक टेक्नोलॉजी है, ओर इसी टेक्नोलॉजी के आधार पर कई सारे ORM (object Relational Mapping) Tool का देवेलोप्मेंट हुआ है</li>
+          <li>JDBC का उपयोग Java प्रोग्राम और डेटाबेस के बीच कनेक्टिविटी स्थापित करने के लिये किया जाता हे।</li>
+          <li>वर्तमान समय में कई सारे ORM tool जिनके द्वारा डेटाबेस पर ऑपरेशन किये जा सकते है पर ये सभी internally JDBC का उपयोग करते हे।</li>
+              <p style="margin-left: 7%">** Example: Hibernate</p>
+          
+        </ul>
+      </p>
+    </div>
+    <div class="card">
+      <h2>Why we need JDBC?</h2> <br>
+      <p>अगर हम कोई भी प्रोग्राम या एप्लीकेशन को बनाते हे, तो हमें किसी न किसी डेटा को store करने के लिये डेटाबेस की आवस्य्क्ता होती चूँकि डेटाबेस मे डेटा स्थायी रुप से store रहता हे, इसलिये जावा प्रोग्राम से डेटा को डेटाबेस मे store करने के लिये JDBC की आवस्य्क्ता होति हे।</p>
+    </div>
+    <div class="card">
+      <h2>Who is responsible for implementing JDBC API ?</h2> <br>
+      <p>डेटाबेस vendor JDBC API को implement करने के लिये responsible होता हे।</p>
+    </div>
+
+    <div class="card">
+      <h2>Uses of JDBC</h2><br>
+      <p >
+          <ol type="i" start="i" style="margin-left: 20px;">
+            <li style="padding: 2px;">Java Applets</li>
+            <li style="padding: 2px;">Servlet</li>
+            <li style="padding: 2px;">JSP (java server page)</li>
+            <li style="padding: 2px;">EJB (Enterprise Java Beans)</li>
+            <li style="padding: 2px;">Java Application</li>
+          </ol>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Advantages of JDBC</h2> <br>
+      <p>
+        <ul type="circle">
+          <li>JDBC API प्लेटफॉर्म independent होती हे.</li>
+          <li>JDBC API डेटाबेस independent होती हे.</li>
+          <li>3)JDBC का उपयोग करके किसी भी डेटाबेस पर ऑप्रेसन परर्फोर्मे किये जा सकते हे.</li>
+          <li>4)JDBC का उपयोग करके CRUD ऑप्रेसन परर्फोर्मे किये जा सकते हे</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Disadvantages of JDBC</h2> <br>
+      <p>
+        <ul type="circle">
+          <li>JDBC मे लिखा गया प्रोग्राम database dependent होता हे.</li>
+          <li>JDBC में डेटाबेस को change करना मुस्किल होता है.</li>
+          <li>JDBC का code एक-दूसरे पर निर्भर होता है.</li>
+          <li>JDBC मे Exception handling अनिवार्य होती, बिना Exception handling क़े प्रोग्राम compile नही होता हे.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="card">
+      <h2>Package of JDBC API</h2> <br>
+      <p>JDBC API मे दो packages होते हे</p>
+      <ol style="margin-left: 30px;">
+        <li style="color:red">java.sql package</li>
+          <p>इस package के अंदर normal classes आती है जिनके द्वारा डेटाबेस से  कम्युनिकेशन किया जाता हे ये classes निम्न  हे-</p>
+            <ul>
+              <li> Connection  (interface)</li>
+               <li>Connection  (interface)</li>
+                <li>PreparedStaement (interface)</li>
+                 <li>ResultSet (interface</li>
+                  <li>DriverManager (class)</li>
+            </ul>
+        <li style="color:red">Javax.sql package</li>
+            <p>इस package के अंदर advance classes आती है जिनके द्वारा डेटाबेस से  कम्युनिकेशन किया जाता हे ये classes निम्न हे-</p>
+            <ul>
+              <li>RowSet (interface)</li>
+              <li>CachedRowSet (interface)</li>
+              <li>WebRowSet (interface)</li>
+              <li>JoinRowSet (interface)</li>
+              <li>DataSource (interface)</li>
+              <li>CommonDataSource (interface)</li>
+              <li> ConnectionEvent (class</li>
+            </ul>
+      </ol>
+    </div>
+
+    <!-- <div class="card">
+      <p>Hi friends!,thank you for reading this article</p>
+      <p style="margin-left: 18px">If you have any question please ask... </p><br>
+
+         <input type="text" name="name" placeholder="  Enter your name..." required/> <br><br><textarea rows="2" cols="25"placeholder="  Question ask here...."required></textarea>&nbsp;<button>Ask.......</button><br>
+         <input type="submit" value="Submit"></div> -->
+       
+            
+    <div class="card">
+      <p>Hi friends! thank you for reading this article</p>
+      <p style="margin-left: 18px">If you have any question please ask... </p><br>
+
+          <div class="container">
+          <form action="#">
+            <div class="row">
+              <div class="col-75">
+                <input type="text" id="qname" name="qname" placeholder="Enter Your Name Here...">
+              </div>
+            </div>
+           
+            
+            <div class="row">
+              
+              <div class="col-75">
+                <textarea id="question" name="question" placeholder="Ask Question  Here..." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Ask....">
+            </div>
+          </form>
+        </div>
+    </div>
+      
+
+        
+     
+
+ <div class="card">
+          <p>Please comment here....</p>
+        <div class="container">
+          <form action="#">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Name:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Enter Name here...">
+              </div>
+            </div>
+           
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Comment</label>
+              </div>
+              <div class="col-75">
+                <textarea id="comment" name="comment" placeholder="Write comments here..." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Comment">
+            </div>
+          </form>
+        </div>
+
+    </div>
+
+     
+
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Popular Post</h3><br>
+      <div class="fakeimg"><a href="#"> JDBC Standard Steps</a></div><br>
+      <div class="fakeimg"><a href="#">Components of JDBC</a></div><br>
+      <div class="fakeimg"><a href="#">SQL commands</a></div><br>
+      <div class="fakeimg"><a href="#">Types of JDBC Driver</a></div>
+    </div>
+   <!--  <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div> -->
+  </div>
+</div>
+
+<footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          <p>We are a web developer, our main purpose is to teach everyone who want to learn new technology and programing languages in hindi . and we will always provide you best and easily understandable content.</p>
+          <div class="social">
+            <a href="#"><span class="fab fa-facebook-f"></span></a>
+            <a href="#"><span class="fa fa-twitter"></span></a>
+            <a href="#"><span class="fab fa-instagram"></span></a>
+            <a href="#"><span class="fab fa-youtube"></span></a>
+
+          </div>
+        </div>
+      </div>
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="text">Delhi</span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text">7088224402</span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope"></span>
+            <span class="text">programingStack@gmail.com</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="right box">
+        <h2>Contect us</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" name="" required />
+            </div>
+            <div class="msg">
+              <div class="text">Message *</div>
+              <textarea rows="2" cols="25" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <center>
+        <span class="far fa-copyright"></span><span>2020 All rights reserved</span>
+      </center>
+    </div>
+  </footer>
+
+</body>
+</html>
